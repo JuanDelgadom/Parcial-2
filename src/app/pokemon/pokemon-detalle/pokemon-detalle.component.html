@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ pokemonDetail.name }}</h5>
+          <p class="card-text"><img src={{pokemonDetail.sprites.front_default}} alt="foto" width="100" height="100"></p>
+          <p class="card-text">ID: {{ pokemonDetail.id}}</p>
+          <p class="card-text">Height: {{ pokemonDetail.height}}</p>
+          <p class="card-text">Weight: {{ pokemonDetail.weight}}</p>
+          <p class="card-text">Type: {{ pokemonDetail.weight}}</p>
+          <b class="card-text">Types:</b>
+          <div *ngFor="let tipo of pokemonDetail.types">
+            <p class="card-text"> {{ tipo.type.name}}- {{ tipo.type.url}}</p>
+        </div>
+          <b class="card-text">abilities:</b>
+          <div *ngFor="let habilidad of pokemonDetail.abilities">
+            <p class="card-text"> {{ habilidad.ability.name}} - {{ habilidad.ability.url}}</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
